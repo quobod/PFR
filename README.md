@@ -4,18 +4,17 @@
 
 ---
 - Development Platform
- - Ubuntu 20.04.2 LTS
- - Python3
+    Ubuntu 20.04.2 LTS
 - IDE
- - Visual Studio Code v1.57.1
+    Visual Studio Code v1.57.1
 
 ### _Working out code in a virtual environment
 - *Install virtualenv*
- - sudo apt install virtualenv
-- *Initialize project directory*
- - virtualenv -p /path/to/python of "$(which python3)" project-name
- - *Change into the project directory*
-  - *Activate the environment*
-   - source bin/activate
-  - *To deactivate the environment*
-   - deactivate
+    sudo apt install virtualenv
+    *Initialize project directory*
+        virtualenv -p /path/to/python of "$(which python3)" project-name
+    *Change into the project directory*
+    *Activate the environment*
+        source bin/activate
+    *To deactivate the environment*
+        deactivate
