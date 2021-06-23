@@ -4,9 +4,9 @@
 
 ---
 - Development Platform
-    Ubuntu 20.04.2 LTS
+    - Ubuntu 20.04.2 LTS
 - IDE
-    Visual Studio Code v1.57.1
+    - Visual Studio Code v1.57.1
 
 ### _Working out code in a virtual environment
 - *Install virtualenv*
