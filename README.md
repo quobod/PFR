@@ -10,7 +10,7 @@
 
 ### _Working out code in a virtual environment
 - *Install virtualenv*
-    - sudo apt install virtualenv
+    - sudo apt install virtualenv -y
 - *Initialize project directory*
     - virtualenv -p /path/to/python Or "$(which python3)" project-name
 - *Change into the project directory*
