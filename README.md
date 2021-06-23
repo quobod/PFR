@@ -11,10 +11,10 @@
 ### _Working out code in a virtual environment
 - *Install virtualenv*
     - sudo apt install virtualenv
-    - *Initialize project directory*
-     - virtualenv -p /path/to/python of "$(which python3)" project-name
-    - *Change into the project directory*
-    - *Activate the environment*
-     - source bin/activate
-    - *To deactivate the environment*
-     - deactivate
+- *Initialize project directory*
+    - virtualenv -p /path/to/python of "$(which python3)" project-name
+- *Change into the project directory*
+- *Activate the environment*
+    - source bin/activate
+- *To deactivate the environment*
+    - deactivate
