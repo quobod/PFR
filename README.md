@@ -12,7 +12,7 @@
 - *Install virtualenv*
     - sudo apt install virtualenv
 - *Initialize project directory*
-    - virtualenv -p /path/to/python of "$(which python3)" project-name
+    - virtualenv -p /path/to/python Or "$(which python3)" project-name
 - *Change into the project directory*
 - *Activate the environment*
     - source bin/activate
