@@ -29,7 +29,6 @@ def start():
             break
         else:
             username, email = getCredentials()
-            print(username + ' ' + email)
             if (isLetters(username.strip()) and isString(email.strip())):
                 return {'name': username.strip(), 'email': email.strip()}
             else:
