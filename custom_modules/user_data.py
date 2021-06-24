@@ -7,7 +7,7 @@ def getUsername():
     pun = re.compile('^[a-zA-Z]+$')
     un = input('Create a username:\t')
     if pun.search(un.strip()):
-        return un
+        return un.strip()
     else:
         print('\tUsername: ' + un + ' must contain letters only ... try again\n')
         getUsername()
@@ -18,7 +18,7 @@ def getEmail():
         '^([a-zA-Z0-9]+)(\\.[a-zA-Z0-9]+)?@([a-zA-Z]+)\\.[a-zA-Z]{2,3}$')
     em = input('Enter email address:\t')
     if (pem.search(em.strip())):
-        return em
+        return em.strip()
     else:
         print('\tEmail: ' + em + ' is not valid ... Try again\n')
         getEmail()
