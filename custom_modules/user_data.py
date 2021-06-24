@@ -31,7 +31,7 @@ def getPassword():
     if (p1.strip() != p2.strip()):
         print('\n\tPasswords don\'t match ... Try again\n')
         getPassword()
-    elif (len(p1) < 6 or len(p2) < 6):
+    elif (len(p1) < 6):
         print('\nPassword must be at least 6 characters ... Try again\n')
         getPassword()
     else:
