@@ -20,10 +20,10 @@ def init():
         if (isString(password)):
             user.update({'password': str(hashed)})
             token = generate_token(user)
-            verified = verify_token(token)
             info = get_info(token)
             meta = get_meta(token)
             token = refresh_token(token)
+            verified = verify_token(token)
             if verified and check_password(password, hashed):
                 print('\n\tToken Info: ' + str(info[1]) + '\n')
 
