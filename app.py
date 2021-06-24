@@ -2,7 +2,7 @@
 from custom_modules.log import log
 from custom_modules.user_data import start, getPassword
 from custom_modules.utils import clear
-from custom_modules.hasher import hash_password
+from custom_modules.hasher import hash_password, check_password
 from custom_modules.input_validation import isString
 from custom_modules.jwt import generate_token, get_info, get_meta, refresh_token, verify_token
 
@@ -24,7 +24,7 @@ def init():
             info = get_info(token)
             meta = get_meta(token)
             token = refresh_token(token)
-            if verified:
+            if verified and check_password(password, hashed):
                 print('\n\tToken Info: ' + str(info[1]) + '\n')
 
     else:
