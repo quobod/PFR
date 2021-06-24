@@ -12,7 +12,7 @@ def init():
     if (type(user) == dict):
         clear()
 
-        log('\n\n\tHi ' + user['name'] +
+        log('\n\n\tHi ' + user['username'] +
             '. Now you have to create a password\n')
         password = getPassword()
         hashed = hash_password(password)
