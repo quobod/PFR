@@ -8,8 +8,22 @@ def getUsername():
 
 
 def getEmail():
-    em = input('Enter email address:\n')
+    em = input('Enter email address:\t')
     return em
+
+
+def getPassword():
+    p1 = input('Create a password:\t')
+    p2 = input('\nConfirm password\t')
+
+    if (p1.strip() != p2.strip()):
+        print('\n\tPasswords don\'t match ... Try again\n')
+        getPassword()
+    elif (len(p1) < 6 or len(p2) < 6):
+        print('\nPassword must be at least 6 characters ... Try again\n')
+        getPassword()
+    else:
+        return p1.strip()
 
 
 def getCredentials():
