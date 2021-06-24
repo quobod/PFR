@@ -11,11 +11,6 @@ def init():
     user = start()
     if (type(user) == dict):
         clear()
-        token = generate_token(user)
-        verified = verify_token(token)
-        info = get_info(token)
-        meta = get_meta(token)
-        token = refresh_token(token)
 
         log('\n\n\tHi ' + user['name'] +
             '. Now you have to create a password\n')
@@ -23,9 +18,13 @@ def init():
         hashed = hash_password(password)
 
         if (isString(password)):
-            print('\tOriginal Password: ' + password)
-            print('\tHashed Password: ' + str(hashed))
-            print('\n\n')
+            user.password = hashed
+            token = generate_token(user)
+            verified = verify_token(token)
+            info = get_info(token)
+            meta = get_meta(token)
+            token = refresh_token(token)
+            print('\n\tToken Meta: ' + info + '\n')
 
     else:
         log('\n\tDone\n')
