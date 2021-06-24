@@ -20,7 +20,7 @@ def init():
         log('\tToken Info: ' + str(info[1]))
         log('\tToken Meta: ' + str(meta[0]))
         log('\tRefreshing Token')
-        log('Token:\t' + str(token))
+        log('\nToken:\t' + str(token))
 
     else:
         log('\n\tDone\n')
