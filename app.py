@@ -10,14 +10,17 @@ def init():
     if (type(user) == dict):
         clear()
         token = generate_token(user)
+        verified = verify_token(token)
+        info = get_info(token)
+        meta = get_meta(token)
+        token = refresh_token(token)
 
         log('\n\n\tHi ' + user['name'] + '\n')
-        log('\tToken Verified? ' + str(verify_token(token)))
-        log('\tToken Info: ' + str(get_info(token)))
-        log('\tToken Meta: ' + str(get_meta(token)))
+        log('\tToken Verified? ' + str(verified))
+        log('\tToken Info: ' + str(info[1]))
+        log('\tToken Meta: ' + str(meta[0]))
         log('\tRefreshing Token')
-        refresh_token(token)
-        log('\tToken Info: ' + str(get_info(token)))
+        log('Token:\t' + str(token))
 
     else:
         log('\n\tDone\n')
