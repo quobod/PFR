@@ -24,7 +24,8 @@ def init():
             info = get_info(token)
             meta = get_meta(token)
             token = refresh_token(token)
-            print('\n\tToken Meta: ' + str(info) + '\n')
+            if verified:
+                print('\n\tToken Info: ' + str(info[1]) + '\n')
 
     else:
         log('\n\tDone\n')
