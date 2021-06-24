@@ -56,6 +56,6 @@ def start():
         else:
             username, email = getCredentials()
             if (isLetters(username) and isString(email)):
-                return {'name': username.strip(), 'email': email.strip()}
+                return {'username': username.strip(), 'email': email.strip()}
             else:
                 start()
