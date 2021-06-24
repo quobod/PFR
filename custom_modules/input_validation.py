@@ -14,3 +14,9 @@ def isLetters(arg):
 
 def isNumbers(arg):
     return ((type(arg) == int or type(arg) == float) and re.search(pNumbers, arg))
+
+
+def isEmail(arg):
+    re.compile(
+        '^([a-zA-Z0-9]+)(\\.[a-zA-Z0-9]+)?@([a-zA-Z]+)\\.[a-zA-Z]{2,3}$')
+    return re.search(arg)

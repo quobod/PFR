@@ -1,15 +1,27 @@
+import re
 from custom_modules.input_validation import isString, isLetters
 from custom_modules.utils import clear
 
 
 def getUsername():
+    pun = re.compile('^[a-zA-Z]+$')
     un = input('Create a username:\t')
-    return un
+    if pun.search(un.strip()):
+        return un
+    else:
+        print('\tUsername: ' + un + ' must contain letters only ... try again\n')
+        getUsername()
 
 
 def getEmail():
+    pem = re.compile(
+        '^([a-zA-Z0-9]+)(\\.[a-zA-Z0-9]+)?@([a-zA-Z]+)\\.[a-zA-Z]{2,3}$')
     em = input('Enter email address:\t')
-    return em
+    if (pem.search(em.strip())):
+        return em
+    else:
+        print('\tEmail: ' + em + ' is not valid ... Try again\n')
+        getEmail()
 
 
 def getPassword():
@@ -43,7 +55,7 @@ def start():
             break
         else:
             username, email = getCredentials()
-            if (isLetters(username.strip()) and isString(email.strip())):
+            if (isLetters(username) and isString(email)):
                 return {'name': username.strip(), 'email': email.strip()}
             else:
                 start()
