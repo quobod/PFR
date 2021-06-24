@@ -18,13 +18,13 @@ def init():
         hashed = hash_password(password)
 
         if (isString(password)):
-            user.password = hashed
+            user.update({'password': str(hashed)})
             token = generate_token(user)
             verified = verify_token(token)
             info = get_info(token)
             meta = get_meta(token)
             token = refresh_token(token)
-            print('\n\tToken Meta: ' + info + '\n')
+            print('\n\tToken Meta: ' + str(info) + '\n')
 
     else:
         log('\n\tDone\n')
