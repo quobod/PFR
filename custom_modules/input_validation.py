@@ -7,9 +7,6 @@ pEmail = re.compile(
 pPasswordCharacterCriteria = re.compile("^[a-zA-Z0-9@#\$%\&]{6}$")
 
 
-def passwordLengthCriteria(arg): return len(arg) >= 6
-
-
 def isString(arg): return (type(arg) == str and len(arg) > 0)
 
 
