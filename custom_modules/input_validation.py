@@ -5,6 +5,8 @@ pNumbers = re.compile("^[0-9]+$")
 pEmail = re.compile(
     '^([a-zA-Z0-9]+)(\\.[a-zA-Z0-9]+)?@([a-zA-Z]+)\\.[a-zA-Z]{2,3}$')
 pPasswordCharacterCriteria = re.compile("^[a-zA-Z0-9@#\$%\&]{6}$")
+
+
 def passwordLengthCriteria(arg): return len(arg) >= 6
 
 
